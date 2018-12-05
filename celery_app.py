@@ -1,10 +1,9 @@
-from __future__ import absolute_import  #拒绝隐式引入
+from __future__ import absolute_import  # 拒绝隐式引入
 
 from celery import Celery
-# from celery_config import celery_config
-# import config
 
-app = Celery('celery_app',include=['celery_tasks'])
+
+app = Celery('celery_app', include=['celery_tasks'])
 
 app.config_from_object('celery_config')
 # broker=celery_config.BROKER_URL,
